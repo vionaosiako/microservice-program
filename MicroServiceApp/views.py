@@ -2,6 +2,9 @@ from django.shortcuts import render
 from .serializers import Account_Serializer,Customer_Account_Details_Serializer,Customer_Serializer
 from rest_framework import viewsets
 from .models import *
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,login,logout
+
 
 # Create your views here.
 class Account_Viewset(viewsets.ModelViewSet):
